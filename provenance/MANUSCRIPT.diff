@@ -1,0 +1,29 @@
+--- frozen-original.tex
++++ paper.tex
+@@ -12,7 +12,7 @@
+ \newtheorem{remark}[theorem]{Remark}
+ \newcommand{\tr}{\operatorname{tr}}
+ \title{Projective-plane determinant bounds\\for sparse binary matrices}
+-\author{John Tripodo}
++\author{John Tripodo\thanks{\copyright\ 2026 John Tripodo. Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}. ORCID: \href{https://orcid.org/0009-0006-9180-4953}{0009-0006-9180-4953}.}}
+ \date{21 October 2026}
+ \begin{document}
+ \maketitle
+@@ -320,7 +320,7 @@
+ above are not claimed as new.
+ 
+ \paragraph{AI assistance.}
+-OpenAI tools assisted mathematical exploration, proof engineering, computational checking, literature research, and manuscript preparation.
++OpenAI tools assisted mathematical exploration, proof engineering, computational checking, literature research, and manuscript preparation. The author is responsible for the mathematical statements, proofs, source comparisons, and final text.
+ 
+ \appendix
+ \section{Exact certificate arithmetic}\label{app:exact}
+@@ -435,7 +435,7 @@
+ \href{https://arxiv.org/abs/1902.09644}{arXiv:1902.09644} (2019).
+ \bibitem{Se} J.~Semonsen,
+ An asymptotic determinant bound on $0$--$1$ matrices with fixed row sums,
+-\href{https://arxiv.org/abs/2002.02482}{arXiv:2002.02482} (2020).
++\href{https://arxiv.org/abs/2002.02482}{\mbox{arXiv:2002.02482}} (2020).
+ \bibitem{Sh} Y.~Shitov,
+ On the determinant of a sparse $0$--$1$ matrix,
+ \emph{Linear Algebra Appl.} \textbf{554} (2018), 49--50.

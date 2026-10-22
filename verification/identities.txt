@@ -1,0 +1,9 @@
+q(t)=log t                   residual = 0
+q'(t)=1/t                    residual = 0
+q(R)=log R                   residual = 0
+a+2F0=2ell                   residual = 0
+alpha derived=closed         residual = 0
+beta derived=closed          residual = 0
+q(r,1/r)=0                   residual = 0
+d2q/du2 = 2 gamma R^2        residual = 0
+ALL SYMBOLIC IDENTITIES HOLD

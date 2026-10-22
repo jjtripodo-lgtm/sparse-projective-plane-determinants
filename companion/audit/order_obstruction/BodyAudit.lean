@@ -1,0 +1,81 @@
+import SparseComponent.TotalFamily.OrderObstruction
+import Lean
+open Lean Elab Command
+set_option maxRecDepth 65536
+set_option maxHeartbeats 10000000
+
+private def ownedModule (n : Name) : Bool := n == `SparseComponent.TotalFamily.OrderObstruction
+
+private def kind : ConstantInfo → String
+  | .axiomInfo _ => "axiom"
+  | .thmInfo _ => "theorem"
+  | .defnInfo _ => "definition"
+  | .opaqueInfo _ => "opaque"
+  | .quotInfo _ => "quotient"
+  | .inductInfo _ => "inductive"
+  | .ctorInfo _ => "constructor"
+  | .recInfo _ => "recursor"
+
+private def directDependencies (ci : ConstantInfo) : Array Name := Id.run do
+  let mut ds := ci.type.getUsedConstants
+  if let some v := ci.value? true then ds := ds ++ v.getUsedConstants
+  if let .inductInfo v := ci then ds := ds ++ v.all.toArray ++ v.ctors.toArray
+  if let .ctorInfo v := ci then ds := ds.push v.induct
+  if let .recInfo v := ci then
+    ds := ds ++ v.all.toArray
+    for rule in v.rules do ds := ds.push rule.ctor ++ rule.rhs.getUsedConstants
+  return ds
+
+/-- Independent body traversal. It intentionally does not use the imported
+precomputed axiom table or Lean.collectAxioms to discover dependencies. -/
+private partial def walkProofDependencies (env : Environment) (pending : List Name)
+    (seen : NameSet) (axioms : NameSet) : CommandElabM (NameSet × NameSet) := do
+  match pending with
+  | [] => return (seen, axioms)
+  | n :: rest =>
+    if seen.contains n then return ← walkProofDependencies env rest seen axioms
+    let some ci := env.checked.get.find? n | throwError "Missing declaration body/type: {n}"
+    let seen := seen.insert n
+    let axioms := if kind ci == "axiom" then axioms.insert n else axioms
+    if ci.isUnsafe then throwError "Unsafe transitive dependency: {n}"
+    walkProofDependencies env ((directDependencies ci).toList ++ rest) seen axioms
+
+run_cmd do
+  let env := (← getEnv).setExporting false
+  let entries := env.constants.fold (init := #[]) fun acc n ci =>
+    match env.getModuleIdxFor? n with
+    | none => acc
+    | some idx =>
+      let m := env.header.moduleNames[idx.toNat]!
+      if ownedModule m then acc.push (n,m,ci) else acc
+  let entries := entries.qsort fun a b => Name.quickLt a.1 b.1
+  for (n,m,ci) in entries do
+    if ci.isUnsafe then throwError "Unsafe owned declaration: {n}"
+    if kind ci == "axiom" || kind ci == "opaque" then
+      throwError "Unapproved owned declaration kind: {n}"
+    let j := Json.mkObj [
+      ("name",toJson n.toString), ("module",toJson m.toString),
+      ("kind",toJson (kind ci)), ("has_body",toJson (ci.hasValue true)),
+      ("type_hash",toJson ci.type.hash),
+      ("body_hash",toJson ((ci.value? true).map Expr.hash)),
+      ("direct_dependencies",toJson ((directDependencies ci).toList.map Name.toString))]
+    liftIO <| IO.println ("DECL " ++ j.compress)
+  let (seen, axioms) ← walkProofDependencies env (entries.toList.map fun x => x.1) {} {}
+  let bad := axioms.toArray.filter fun a => !([`propext, `Classical.choice, `Quot.sound].contains a)
+  if !bad.isEmpty then throwError "Unexpected body-traced axioms: {bad}"
+  let j := Json.mkObj [
+    ("owned_declarations",toJson entries.size),
+    ("transitive_declarations",toJson seen.size),
+    ("body_traced_axioms",toJson (axioms.toArray.toList.map Name.toString))]
+  liftIO <| IO.println ("BODY_AUDIT " ++ j.compress)
+  for m in env.header.moduleNames do
+    liftIO <| IO.println ("IMPORT " ++ m.toString)
+    if ownedModule m then liftIO <| IO.println ("MODULE " ++ m.toString)
+
+
+#print SparseComponent.TotalFamily.determinant_family_order_multiple
+#print SparseComponent.TotalFamily.determinant_family_strict_of_order_not_dvd
+#print SparseComponent.TotalFamily.literal_total_family_strict_of_order_not_dvd
+#print axioms SparseComponent.TotalFamily.determinant_family_order_multiple
+#print axioms SparseComponent.TotalFamily.determinant_family_strict_of_order_not_dvd
+#print axioms SparseComponent.TotalFamily.literal_total_family_strict_of_order_not_dvd

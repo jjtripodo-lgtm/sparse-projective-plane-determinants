@@ -1,0 +1,22 @@
+{
+  "correspondence": {
+    "t": "r-1",
+    "v": "planeOrder r = r^2-r+1",
+    "gamma_r": "gamma r",
+    "alpha_r": "slope r",
+    "ell_r": "rate r",
+    "D_r": "designBlockDet r",
+    "T_r(1/d,1/c)": "edgeCost r anchor d c"
+  },
+  "proof_variation": "The new coupled scalar certificate uses exact rational log enclosures, a finite window through 3*r and proved unbounded reciprocal tails, rather than the manuscript's 12*r interval branch-and-bound. Every gate is proved inside Lean.",
+  "excluded_claims": [
+    "Prime-power plane existence and witness construction for every density",
+    "Nonexistence classifications at orders 6 and 10",
+    "Existence or nonexistence at order 12",
+    "Novelty, priority or publication readiness"
+  ],
+  "caveat": "Unattainment statements for densities 7 and 11 require a nonempty-order qualifier; the formal main equality theorem includes the empty matrix. Higher-density manuscript frontiers are separate from this pinned 3\u201314 source.",
+  "content_sha256": "783fa6551a147c95a7000403a4e588e62d2b71d98b6c4bfec65b75d40ea0d695",
+  "target_claim": "The main unrestricted all-count inequality, total-budget corollary and exact actual-plane equality for integer densities 3 through 14, with explicit original binary-matrix hypotheses and empty/singular cases.",
+  "public_export_note": "Private origin locators removed; mathematical content and dependency versions unchanged. Integrity manifests regenerated for this export."
+}

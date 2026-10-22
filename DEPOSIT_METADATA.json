@@ -1,0 +1,29 @@
+{
+  "schema": "platform-neutral-publication-metadata-v1",
+  "title": "Projective-plane determinant bounds for sparse binary matrices",
+  "resource_type": "publication/preprint",
+  "creators": [
+    {
+      "name": "Tripodo, John",
+      "orcid": "https://orcid.org/0009-0006-9180-4953"
+    }
+  ],
+  "version": "1.0.0",
+  "abstract": "For every integer density r from 3 through 14, a binary square matrix with e ones satisfies an explicit affine-exponential determinant bound. Under e <= r n this gives the projective-plane determinant rate, with equality precisely for direct sums of projective-plane incidence matrices of order r-1. Individual row and column degrees are unrestricted. The written proof uses an exact finite scalar certificate with rigorous unbounded-degree tails; the companion contains a pinned 98-module Lean mathematics closure.",
+  "arxiv_subjects": [
+    "math.CO"
+  ],
+  "keywords": [
+    "sparse matrices",
+    "determinants",
+    "projective planes",
+    "combinatorial matrix theory"
+  ],
+  "license": "CC-BY-4.0",
+  "publication_date": null,
+  "doi": "10.5281/zenodo.23550379",
+  "related_identifiers": [],
+  "status": "PUBLISHED_ZENODO",
+  "note": "Published record: https://zenodo.org/records/23550379. Hexagon submission 2610.00457v1 is awaiting moderation, not public.",
+  "original_code_license": "MIT"
+}

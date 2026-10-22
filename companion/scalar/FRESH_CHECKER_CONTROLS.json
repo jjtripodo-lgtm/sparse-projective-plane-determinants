@@ -1,0 +1,9 @@
+{
+  "checker_source_sha256": "5707d6980ef4db344ff36acb500991c556f87aa8f4065baf3d7c52de0359d94a",
+  "exact_anchor_tangency_controls": 12,
+  "exact_interval_containment_controls": 8229,
+  "scope": "Exact sampled interval controls and universal symbolic formula identities; full certificate replay and manuscript coverage argument remain separately required",
+  "status": "passed",
+  "symbolic_F0_identity": true,
+  "symbolic_vertex_to_edge_identity": true
+}

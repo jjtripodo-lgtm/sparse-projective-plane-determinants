@@ -1,0 +1,236 @@
+{
+  "status": "PASS",
+  "checks": 10,
+  "tests": [
+    {
+      "case": "clean",
+      "optimized": false,
+      "returncode": 0,
+      "expected_failure": false,
+      "expected_result_observed": true,
+      "result": {
+        "status": "PASS_SOURCE_INTEGRITY_ONLY",
+        "timestamp_utc": "2026-10-21T17:15:50.807417+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "4858b450b968369c9353463f169b2186e6de0d6c67f0040fbab4288e5c6e0d99",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [],
+        "errors": [],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "wrong_hash",
+      "optimized": false,
+      "returncode": 1,
+      "expected_failure": true,
+      "expected_result_observed": true,
+      "result": {
+        "status": "FAIL",
+        "timestamp_utc": "2026-10-21T17:15:50.847887+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "7726637eaacbd6e9fdffb571bc10b5c814e47d8632883c8730a9c17902de54e2",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [],
+        "errors": [
+          "Changed file: SparseComponent/Bad.lean"
+        ],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "explicit_axiom",
+      "optimized": false,
+      "returncode": 1,
+      "expected_failure": true,
+      "expected_result_observed": true,
+      "result": {
+        "status": "FAIL",
+        "timestamp_utc": "2026-10-21T17:15:50.881865+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "e507baebe7976ef4e6a67945f5b1ca0e84177eddfce828443c7ae2c07723ba22",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [
+          {
+            "path": "SparseComponent/Bad.lean",
+            "tokens": [
+              "axiom"
+            ]
+          }
+        ],
+        "errors": [
+          "Forbidden proof-escape token present"
+        ],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "sorry_body",
+      "optimized": false,
+      "returncode": 1,
+      "expected_failure": true,
+      "expected_result_observed": true,
+      "result": {
+        "status": "FAIL",
+        "timestamp_utc": "2026-10-21T17:15:50.933856+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "2dfebdcc334434eaf224341a9b79394c43c6a4e3166bf90148c2ae746a51516d",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [
+          {
+            "path": "SparseComponent/Bad.lean",
+            "tokens": [
+              "sorry"
+            ]
+          }
+        ],
+        "errors": [
+          "Forbidden proof-escape token present"
+        ],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "comment_only",
+      "optimized": false,
+      "returncode": 0,
+      "expected_failure": false,
+      "expected_result_observed": true,
+      "result": {
+        "status": "PASS_SOURCE_INTEGRITY_ONLY",
+        "timestamp_utc": "2026-10-21T17:15:50.974008+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "24caf8f9ce63a2f8d677d5b0b0f16e925e25a5dcd03210be962e3f13fb8efa04",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [],
+        "errors": [],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "clean",
+      "optimized": true,
+      "returncode": 0,
+      "expected_failure": false,
+      "expected_result_observed": true,
+      "result": {
+        "status": "PASS_SOURCE_INTEGRITY_ONLY",
+        "timestamp_utc": "2026-10-21T17:15:51.130950+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "4858b450b968369c9353463f169b2186e6de0d6c67f0040fbab4288e5c6e0d99",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [],
+        "errors": [],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "wrong_hash",
+      "optimized": true,
+      "returncode": 1,
+      "expected_failure": true,
+      "expected_result_observed": true,
+      "result": {
+        "status": "FAIL",
+        "timestamp_utc": "2026-10-21T17:15:51.295034+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "7726637eaacbd6e9fdffb571bc10b5c814e47d8632883c8730a9c17902de54e2",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [],
+        "errors": [
+          "Changed file: SparseComponent/Bad.lean"
+        ],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "explicit_axiom",
+      "optimized": true,
+      "returncode": 1,
+      "expected_failure": true,
+      "expected_result_observed": true,
+      "result": {
+        "status": "FAIL",
+        "timestamp_utc": "2026-10-21T17:15:51.451839+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "e507baebe7976ef4e6a67945f5b1ca0e84177eddfce828443c7ae2c07723ba22",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [
+          {
+            "path": "SparseComponent/Bad.lean",
+            "tokens": [
+              "axiom"
+            ]
+          }
+        ],
+        "errors": [
+          "Forbidden proof-escape token present"
+        ],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "sorry_body",
+      "optimized": true,
+      "returncode": 1,
+      "expected_failure": true,
+      "expected_result_observed": true,
+      "result": {
+        "status": "FAIL",
+        "timestamp_utc": "2026-10-21T17:15:51.595382+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "2dfebdcc334434eaf224341a9b79394c43c6a4e3166bf90148c2ae746a51516d",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [
+          {
+            "path": "SparseComponent/Bad.lean",
+            "tokens": [
+              "sorry"
+            ]
+          }
+        ],
+        "errors": [
+          "Forbidden proof-escape token present"
+        ],
+        "fresh_lean_compilation": false
+      }
+    },
+    {
+      "case": "comment_only",
+      "optimized": true,
+      "returncode": 0,
+      "expected_failure": false,
+      "expected_result_observed": true,
+      "result": {
+        "status": "PASS_SOURCE_INTEGRITY_ONLY",
+        "timestamp_utc": "2026-10-21T17:15:51.759500+00:00",
+        "source_commit": "test-fixture-only",
+        "project_modules": 1,
+        "checked_files": 1,
+        "manifest_sha256": "24caf8f9ce63a2f8d677d5b0b0f16e925e25a5dcd03210be962e3f13fb8efa04",
+        "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+        "proof_escape_flags": [],
+        "errors": [],
+        "fresh_lean_compilation": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{"q": 2, "r": 3, "v": 7, "n": 7, "ones": 21, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 2}
+{"q": 3, "r": 4, "v": 13, "n": 13, "ones": 52, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 4}
+{"q": 4, "r": 5, "v": 21, "n": 21, "ones": 105, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 7}
+{"q": 5, "r": 6, "v": 31, "n": 31, "ones": 186, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 12}
+{"q": 7, "r": 8, "v": 57, "n": 57, "ones": 456, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 25}
+{"q": 8, "r": 9, "v": 73, "n": 73, "ones": 657, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 34}
+{"q": 9, "r": 10, "v": 91, "n": 91, "ones": 910, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 44}
+{"q": 11, "r": 12, "v": 133, "n": 133, "ones": 1596, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 70}
+{"q": 13, "r": 14, "v": 183, "n": 183, "ones": 2562, "regular": true, "gram_tI_plus_J": true, "abs_det_equals_D": true, "det_digits": 103}
+ALL PLANE WITNESSES EXACT

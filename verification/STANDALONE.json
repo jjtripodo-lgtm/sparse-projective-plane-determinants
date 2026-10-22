@@ -1,0 +1,18 @@
+{
+  "runs": [
+    {
+      "name": "sparse-projective-plane-determinants-latex",
+      "returncode": 0,
+      "byte_identical_to_frozen_pdf": true
+    },
+    {
+      "name": "export-sparse-exact",
+      "returncode": 0
+    },
+    {
+      "name": "export-sparse-exact-O",
+      "returncode": 0
+    }
+  ],
+  "fresh_lean_compilation": false
+}

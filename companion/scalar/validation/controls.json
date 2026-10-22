@@ -1,0 +1,70 @@
+{
+ "mutations_must_fail": {
+  "r10_linear_anchor": {
+   "certified": false,
+   "fail": "window",
+   "window_min": -0.015028158099361862,
+   "argmin": [
+    2,
+    4
+   ]
+  },
+  "r13_without_degree2_cofactor": {
+   "certified": false,
+   "fail": "window",
+   "window_min": -0.37394726042738646,
+   "argmin": [
+    2,
+    2
+   ]
+  },
+  "r15_cubic_K2_outside_family": {
+   "certified": false,
+   "fail": "window",
+   "window_min": -0.02060948057354191,
+   "argmin": [
+    3,
+    3
+   ]
+  },
+  "r16_cubic_K2_outside_family": {
+   "certified": false,
+   "fail": "window",
+   "window_min": -0.0438959222917231,
+   "argmin": [
+    3,
+    3
+   ]
+  },
+  "r12_linear_anchor": {
+   "certified": false,
+   "fail": "window",
+   "window_min": -0.008275133932094475,
+   "argmin": [
+    3,
+    3
+   ]
+  }
+ },
+ "exhaustive_n_le_4_max_slack": {
+  "3": -0.083675,
+  "4": -0.198464,
+  "5": -0.297294,
+  "6": -0.382297,
+  "7": -0.456289,
+  "8": -0.521547,
+  "9": -0.57979,
+  "10": -0.632309,
+  "11": -0.680085,
+  "12": -0.723876,
+  "13": -0.764278,
+  "14": -0.801764
+ },
+ "hill_climb_best_slack": {
+  "3": 0.0,
+  "4": 0.0,
+  "6": -0.535134,
+  "8": -1.414416
+ },
+ "ALL_OK": true
+}

@@ -1,0 +1,261 @@
+{
+  "all_passed": true,
+  "log_series_terms": 100,
+  "negative_controls": [
+    {
+      "argmin": [
+        2,
+        4
+      ],
+      "failure": "finite window",
+      "lower_numerator": "-1502815809936186235510782121780028778935097726132",
+      "ok": false,
+      "r": 10
+    },
+    {
+      "argmin": [
+        3,
+        3
+      ],
+      "failure": "finite window",
+      "lower_numerator": "-827513393209447570233368992686292348463461171363",
+      "ok": false,
+      "r": 12
+    },
+    {
+      "argmin": [
+        2,
+        2
+      ],
+      "failure": "finite window",
+      "lower_numerator": "-37394726042738648034113674429873968810279904478258",
+      "ok": false,
+      "r": 13
+    }
+  ],
+  "rows": [
+    {
+      "K": 1,
+      "N": 36,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "8367545162551679668833094498667541635813622379749"
+      ],
+      "r": 3,
+      "tail_boxes": 36,
+      "tail_lower_numerator": "14998963077965901712258212795488133809391108807978",
+      "window_argmin": [
+        2,
+        3
+      ],
+      "window_lower_numerator": "174823854627288976758418008358835169539819254811",
+      "window_unordered_pairs": 629
+    },
+    {
+      "K": 1,
+      "N": 48,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "19846353706019932076657300444631060173277882715675"
+      ],
+      "r": 4,
+      "tail_boxes": 48,
+      "tail_lower_numerator": "11523750779789698489550232135887882405633733010568",
+      "window_argmin": [
+        4,
+        5
+      ],
+      "window_lower_numerator": "376497522634343088684128323615194290898218355267",
+      "window_unordered_pairs": 1127
+    },
+    {
+      "K": 1,
+      "N": 60,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "29729360168653678042734788352342969975952682264714"
+      ],
+      "r": 5,
+      "tail_boxes": 60,
+      "tail_lower_numerator": "9190720548582820841257957496428124298174924831275",
+      "window_argmin": [
+        6,
+        6
+      ],
+      "window_lower_numerator": "188423489223722736125624959723783161189314943709",
+      "window_unordered_pairs": 1769
+    },
+    {
+      "K": 1,
+      "N": 72,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "38229663653506587994211438894262659148105562818545"
+      ],
+      "r": 6,
+      "tail_boxes": 72,
+      "tail_lower_numerator": "7591594029886384832547561029865137946490190732050",
+      "window_argmin": [
+        7,
+        7
+      ],
+      "window_lower_numerator": "103714129122088187849768892217585131224520316873",
+      "window_unordered_pairs": 2555
+    },
+    {
+      "K": 1,
+      "N": 84,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "45628889485753897970625796470546709236121907380581"
+      ],
+      "r": 7,
+      "tail_boxes": 84,
+      "tail_lower_numerator": "6445238133683910220853899498517860261973893827611",
+      "window_argmin": [
+        8,
+        8
+      ],
+      "window_lower_numerator": "61673453443150263353105043133280313778410586389",
+      "window_unordered_pairs": 3485
+    },
+    {
+      "K": 1,
+      "N": 96,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "52154719754355478818309842121675030002447933068632"
+      ],
+      "r": 8,
+      "tail_boxes": 96,
+      "tail_lower_numerator": "5588361123211662429585646387267404655016778847535",
+      "window_argmin": [
+        9,
+        9
+      ],
+      "window_lower_numerator": "38941861602369820594939853002700470887125392152",
+      "window_unordered_pairs": 4559
+    },
+    {
+      "K": 1,
+      "N": 108,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "57979009091288439452780377424348337370493585966675"
+      ],
+      "r": 9,
+      "tail_boxes": 108,
+      "tail_lower_numerator": "4926899005468340849582163813445611545126013491270",
+      "window_argmin": [
+        10,
+        10
+      ],
+      "window_lower_numerator": "25790885768911267246316827660835947213354224737",
+      "window_unordered_pairs": 5777
+    },
+    {
+      "K": 1,
+      "N": 120,
+      "anchor": "quadratic",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "63230880777611539482081696848315868227988351324403"
+      ],
+      "r": 10,
+      "tail_boxes": 120,
+      "tail_lower_numerator": "4525304782988282494411183273094694605933712029164",
+      "window_argmin": [
+        11,
+        11
+      ],
+      "window_lower_numerator": "19992378048462138192802926119062812221192388301",
+      "window_unordered_pairs": 7139
+    },
+    {
+      "K": 2,
+      "N": 132,
+      "anchor": "linear",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "68008488350162000971194899161788011052337210785862",
+        "3518153476040538685960437963359585636659988769303"
+      ],
+      "r": 11,
+      "tail_boxes": 131,
+      "tail_lower_numerator": "3974940646173527375645410403305565823695311231505",
+      "window_argmin": [
+        12,
+        12
+      ],
+      "window_lower_numerator": "12625246893042794095280848314048918075201302133",
+      "window_unordered_pairs": 8514
+    },
+    {
+      "K": 2,
+      "N": 144,
+      "anchor": "cubic",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "72387632159910702781581242904157706502849497649027",
+        "7479643009028900583454403455743170883285903304811"
+      ],
+      "r": 12,
+      "tail_boxes": 143,
+      "tail_lower_numerator": "3704288125046527580982145833557484779147119607770",
+      "window_argmin": [
+        13,
+        13
+      ],
+      "window_lower_numerator": "10351260967791936995760113878819116985567076912",
+      "window_unordered_pairs": 10152
+    },
+    {
+      "K": 2,
+      "N": 156,
+      "anchor": "cubic",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "76427804841058449096669587212476579729878004832932",
+        "11168076935831635556867796242105294366658091440811"
+      ],
+      "r": 13,
+      "tail_boxes": 155,
+      "tail_lower_numerator": "3395231212779594626795577704393981072145838577564",
+      "window_argmin": [
+        14,
+        14
+      ],
+      "window_lower_numerator": "7729002409485808758666382213393740300442416874",
+      "window_unordered_pairs": 11934
+    },
+    {
+      "K": 2,
+      "N": 168,
+      "anchor": "cubic",
+      "ok": true,
+      "peeling_lower_numerators": [
+        "80176419362054549971348714696829675849042653723382",
+        "14616497498832413949668453124872760635912308699423"
+      ],
+      "r": 14,
+      "tail_boxes": 167,
+      "tail_lower_numerator": "3133145519094555379912549497014607313848114825433",
+      "window_argmin": [
+        15,
+        15
+      ],
+      "window_lower_numerator": "5888204676357712683566408898638573815755940719",
+      "window_unordered_pairs": 13860
+    }
+  ],
+  "scale": "100000000000000000000000000000000000000000000000000",
+  "schema": "sparse-family-exact-integer-certificate-v1",
+  "source_sha256": "5707d6980ef4db344ff36acb500991c556f87aa8f4065baf3d7c52de0359d94a"
+}

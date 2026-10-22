@@ -1,0 +1,444 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\hypersetup{hidelinks,pdftitle={Projective-plane determinant bounds for sparse binary matrices},pdfauthor={John Tripodo}}
+\emergencystretch=3em
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\tr}{\operatorname{tr}}
+\title{Projective-plane determinant bounds\\for sparse binary matrices}
+\author{John Tripodo\thanks{\copyright\ 2026 John Tripodo. Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}. ORCID: \href{https://orcid.org/0009-0006-9180-4953}{0009-0006-9180-4953}.}}
+\date{21 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For an integer $r\ge 3$ put $t=r-1$, $v=r^2-r+1$ and $D_r=r\,t^{(v-1)/2}$, the determinant magnitude of a projective-plane incidence matrix of order $t$ whenever such a plane exists. We prove that for every $3\le r\le 14$ and every
+$n\times n$ matrix $A$ with entries in $\{0,1\}$ and $e$ ones,
+\[
+|\det A|\le \exp\!\bigl(n\,\ell_r+\alpha_r\,(e-rn)\bigr),\qquad \ell_r=\tfrac1v\log D_r,
+\]
+with an explicit constant $\alpha_r>0$. In particular $e\le rn$ implies $|\det A|\le D_r^{\,n/v}$, with no
+restriction on individual row or column degrees. Equality holds exactly for direct sums of incidence matrices of
+projective planes of order $r-1$ (up to row and column permutations). The bound is attained at positive orders divisible by $v$ for
+$r\in\{3,4,5,6,8,9,10,12,14\}$, is never attained at positive order for
+$r\in\{7,11\}$, and is attained at some positive order for $r=13$ if and only
+if a projective plane of order $12$ exists. The case $r=3$, $|\det A|\le 24^{n/7}$, is the sparse
+determinant conjecture of Bruhn and Rautenbach, recorded as Conjecture~1 by Araujo, Balogh and Wang.
+The proof combines a degree-normalised Gram matrix, a quadratic Hermite majorant of $\log$, an edgewise
+convex-tangent decomposition and cofactor peeling of low-degree lines. The only computer-assisted step is a
+finite exact-integer certificate of an explicit two-variable inequality for each $r$, with rigorous coverage of every unbounded degree tail.
+\end{abstract}
+
+\section{Introduction}
+A bound on the total number of ones permits arbitrarily dense individual rows
+or columns. Thus total sparsity is distinct from a fixed row sum or simultaneous
+local degree caps. The strengthened all-count inequality below is essential:
+cofactor minors need not retain an original average-degree bound.
+
+Ryser's fixed-order, fixed-total determinant bound has symmetric designs as
+its equality matrices~\cite[Theorem~3]{Ry}. At projective-plane parameters
+$n=r^2-r+1$ and $e=rn$, it gives the value $D_r$ below. Projective-plane blocks
+and their determinant rates are classical; see also Scheinerman~\cite[Section~2]{S}.
+The question here is a uniform inequality for every order and degree distribution.
+
+Bruhn and Rautenbach~\cite{BR} obtained $6^{n/6}$ for at most $2n$ ones and
+proposed the Fano-plane rate for at most $3n$ ones. Shitov~\cite{Sh} proved
+$3^{(e-n)/4}$ for $e\ge n$. Araujo, Balogh and Wang~\cite[Theorem~3]{ABW}
+improved this to $2^{(e-n)/3}$, giving $2^{2n/3}$ when $e\le3n$, and
+recorded the Fano statement as Conjecture~1 in their Section~6.
+Scheinerman~\cite[Theorem~7.1]{S} also treats unrestricted total-$kn$ sparsity,
+with bound $c_k^n$, where
+\[
+ c_k=(k^2-1)^{(k-1)/(4k)}k^{1/(2k)}<\sqrt{k}.
+\]
+His results are not confined to fixed row sums. Semonsen~\cite{Se} gives
+further fixed-row-sum estimates through linear programming.
+Hu and Zuo~\cite[Theorem~4]{HZ} also give a more recent unrestricted
+edge-count determinant estimate, alongside their separate work on $C_4$-free
+perfect matchings. Their displayed determinant estimate does not give the
+projective-plane constants proved here. Our result
+supplies the projective-plane rate for the finite density range below and
+identifies all equality matrices.
+
+All logarithms are natural. Binary entries are regarded as real numbers when
+taking norms and logarithms. We use the empty determinant convention
+$\det(\varnothing)=1$. Blocks in a direct sum need not be isomorphic.
+
+\begin{theorem}\label{thm:main}
+Let $r$ be an integer with $3\le r\le 14$, let $n\ge0$ be an integer, put $t=r-1$, $R=r^2$, $v=R-t$, and define
+\[
+\gamma_r=\frac{v/t-\log(R/t)}{v^2},\qquad
+\alpha_r=\frac1r-\frac1{2t}+\Bigl(r-\frac12\Bigr)\gamma_r,\qquad
+\ell_r=\frac{\log r+\frac{v-1}{2}\log t}{v}.
+\]
+Then $\alpha_r>0$ (since $1/r-1/(2t)=(r-2)/(2rt)>0$ and $\gamma_r>0$, as $x-1>\log x$ at $x=R/t>1$), and
+every $n\times n$ binary matrix $A$ with $e$ ones satisfies
+\begin{equation}\label{eq:main}
+|\det A|\le \exp\bigl(n\ell_r+\alpha_r(e-rn)\bigr).
+\end{equation}
+Equality holds if and only if, after independent permutations of rows and columns, $A$ is a direct sum of
+incidence matrices of projective planes of order $r-1$ (the empty matrix included).
+\end{theorem}
+
+\begin{corollary}
+For integers $3\le r\le 14$ and $e\le rn$, $|\det A|\le D_r^{\,n/v}$. The bound is attained, for every $n$ divisible by
+$v$, when $r-1$ is a prime power, i.e.\ for $r\in\{3,4,5,6,8,9,10,12,14\}$. For $r=7$ and $r=11$ it is never
+attained at positive order, since there are no projective planes of orders $6$ (Bruck--Ryser~\cite{BruckRyser}) and $10$ (Lam, Thiel and Swiercz~\cite{LTS}).
+For $r=13$ it is attained at some positive order if and only if a projective plane of order $12$ exists.
+Moreover, $e<rn$ or $v\nmid n$ forces strict inequality in the total-budget bound.
+\end{corollary}
+
+The existence classifications in this corollary are external design-theoretic
+facts. In particular, nonattainment does not by itself prove a uniform
+improvement in the asymptotic exponential rate. No such improvement is claimed
+here for $r=7,11$, or $13$.
+
+\paragraph{Proof outline.}
+Degree normalization gives a spectral cap without bounding any original degree.
+A logarithmic majorant converts the determinant into weighted Gram moments.
+A convex tangent decomposition couples the row and column deficits along actual
+incidences. A finite exact scalar certificate, including the entire degree tail,
+then gives the bound whenever all degrees exceed a small threshold. Cofactor
+expansion handles the remaining degrees. Vanishing of every lost term at
+equality forces actual isolated projective-plane blocks.
+
+\begin{table}[t]\centering\small
+\begin{tabular}{rrrrlr}\toprule
+$r$ & $v$ & $D_r^{1/v}$ & $K$ & Anchor & $10^7\min T_r$ exceeds\\\midrule
+3&7&1.574610&1&linear&17482\\
+4&13&1.847235&1&linear&37649\\
+5&21&2.089198&1&linear&18842\\
+6&31&2.308410&1&linear&10371\\
+7&43&2.510041&1&linear&6167\\
+8&57&2.697612&1&linear&3894\\
+9&73&2.873633&1&linear&2579\\
+10&91&3.039955&1&quadratic&1999\\
+11&111&3.197992&2&linear&1262\\
+12&133&3.348848&2&cubic&1035\\
+13&157&3.493405&2&cubic&772\\
+14&183&3.632379&2&cubic&588\\\bottomrule
+\end{tabular}
+\caption{Finite-window certificate, excluding $(r,r)$. The final column gives
+strict rational bounds with denominator $10^7$. Rate decimals are illustrative
+only. All tail-box and peeling-margin lower bounds exceed $3/100$.}
+\label{tab:cert}
+\end{table}
+
+\section{The normalised Gram matrix and the vertex deficit}
+Fix $r$ and drop the subscript. Let $A$ be nonsingular with all row degrees $d_i\ge1$ and column degrees $c_j\ge1$.
+Put $M_{ij}=A_{ij}/\sqrt{d_ic_j}$ and $G=R\,MM^{\top}$.
+
+\begin{lemma}[contraction]\label{lem:contract}
+The Euclidean operator norm satisfies $\|M\|\le1$; hence the eigenvalues of $G$ lie in $(0,R]$.
+\end{lemma}
+\begin{proof}
+By Cauchy--Schwarz, $(\sum_jM_{ij}x_j)^2\le(\sum_jA_{ij}/d_i)(\sum_jA_{ij}x_j^2/c_j)=\sum_jA_{ij}x_j^2/c_j$.
+Summing over $i$ gives $\sum_j x_j^2$. Positivity follows from $\det A\ne0$.
+\end{proof}
+
+Since $\det G=R^n(\det A)^2/(\prod d_i\prod c_j)$,
+\begin{equation}\label{eq:logdet}
+\log|\det A|^2=\log\det G+\sum_i\log\frac{d_i}{r}+\sum_j\log\frac{c_j}{r}.
+\end{equation}
+
+\paragraph{Hermite majorant.} Let $q(z)=a+bz-\gamma z^2$ with $b=1/t+2\gamma t$, $a=\log t-bt+\gamma t^2$. Then
+$q(t)=\log t$, $q'(t)=1/t$, $q(R)=\log R$. More explicitly, for $z>0$,
+\[
+ q(z)-\log z=(z-t)^2(R-z)
+   \int_0^\infty\frac{ds}{(s+t)^2(s+R)(s+z)}.
+\]
+This identity follows by subtracting the Hermite interpolant of $1/(s+z)$
+inside the integral representation of $\log z$. The integral converges and is
+strictly positive. Hence $\log z\le q(z)$ on $(0,R]$, with equality exactly
+at $z\in\{t,R\}$. Applying this to every eigenvalue gives
+$\log\det G\le na+b\tr G-\gamma\tr G^2$.
+
+\paragraph{Moments.} Let $u_i=\sum_jA_{ij}/(d_ic_j)$ and $w_j=\sum_iA_{ij}/(d_ic_j)$. Then $\tr G=R\sum_iu_i=R\sum_jw_j$,
+$\sum_id_iu_i=\sum_jc_jw_j=n$, and expanding $\tr(MM^\top)^2$ over index quadruples gives
+\[
+\tr G^2=R^2\Bigl(\sum_iu_i^2+\sum_jw_j^2-\sum_{A_{ij}=1}\frac1{d_i^2c_j^2}+4W\Bigr),\qquad W\ge0,
+\]
+where $Q=\sum_{A_{ij}=1}1/(d_i^2c_j^2)$ and $W=\sum 1/(d_id_{i'}c_jc_{j'})$ over $i<i'$, $j<j'$ with $A_{ij}=A_{ij'}=A_{i'j}=A_{i'j'}=1$. The equal-row terms contribute $\sum_i u_i^2$, the equal-column terms
+contribute $\sum_jw_j^2$, and their intersection is subtracted once. Each
+rectangle has four orientations. This accounts for every term and the factor $4$.
+Since
+$\frac1{d^2c^2}\le\frac12(\frac1{d^3c}+\frac1{dc^3})$ (difference $\frac{(d-c)^2}{2d^3c^3}$), we obtain the following inequality. The upper bound for $Q$ has the correct
+sign: it gives a lower bound for $\tr G^2$, whose coefficient is $-\gamma$.
+The nonnegative rectangle loss is discarded.
+\begin{equation}\label{eq:sep}
+\log|\det A|^2\le na+\sum_iF(d_i,u_i)+\sum_jF(c_j,w_j),\qquad
+F(d,u)=\Bigl(\frac{bR}2+\frac{\gamma R^2}{2d^2}\Bigr)u-\gamma R^2u^2+\log\frac dr .
+\end{equation}
+
+\paragraph{The vertex deficit.} With
+$F_0=F(r,1/r)=br/2-\gamma(R-r/2)$, define
+\[
+q_r(d,u)=F_0+\alpha(d-r)+\beta(du-1)-F(d,u),\qquad \beta=\frac r{2t}-\gamma\Bigl(R+\frac r2\Bigr).
+\]
+The constants $\alpha,\beta$ are exactly those making $q_r$ vanish to first order at the plane point
+$(d,u)=(r,1/r)$, and $a+2F_0=2\ell$. Indeed
+\[
+ a+2F_0=\log t+\frac1t-v\gamma
+       =\log t+\frac{\log(R/t)}v=2\ell.
+\]
+These are algebraic identities; a symbolic replayer is supplied as a control.
+Summing~\eqref{eq:sep} with $\sum_id_i=\sum_jc_j=e$ and $\sum d_iu_i=\sum c_jw_j=n$ yields
+\begin{equation}\label{eq:deficit}
+\log|\det A|\le n\ell+\alpha(e-rn)-\frac12\Bigl(\sum_iq_r(d_i,u_i)+\sum_jq_r(c_j,w_j)\Bigr).
+\end{equation}
+
+\section{Edgewise convex tangents}
+For fixed $d$, $q_r(d,\cdot)$ is a convex quadratic ($\partial_u^2q_r=2\gamma R^2>0$). For an anchor function
+$x\mapsto A(x)$ with $A(1/r)=1/r$, the supporting tangent at $A(1/d)$ gives
+$q_r(d,u)\ge q_r(d,A)+\partial_uq_r(d,A)(u-A)$ for all real $u$. A row vertex of degree $d$ has
+$u=\frac1d\sum_{j\sim i}\frac1{c_j}$, so the right side splits over its $d$ incident ones. Doing the same for
+columns, the total deficit in~\eqref{eq:deficit} is at least $\sum_{A_{ij}=1}T_r(1/d_i,1/c_j)$ with
+\[
+T_r(x,y)=g(x,y)+g(y,x),\qquad g(x,y)=x\bigl[q_r(\tfrac1x,A(x))+\partial_uq_r(\tfrac1x,A(x))\,(y-A(x))\bigr].
+\]
+Multiplying through by $x$ removes all singularities: $g$ is a polynomial in $x,y$ plus $x\log(rx)$.
+The anchors are
+\[
+A_{\rm lin}(x)=\tfrac{2}{5r}+\tfrac35x,\quad A_{\rm quad}(x)=-\tfrac1{100}+\tfrac65x-x^2\ (r=10),\quad
+A_{\rm cub}(x)=x-\tfrac23(x-\tfrac1r)^2-\tfrac32(x-\tfrac1r)^3 .
+\]
+At the plane point, $q_r=\partial_uq_r=0$, hence $T_r(1/r,1/r)=0$ exactly.
+For the finite certificate we use the expanded expression
+\begin{align}\label{eq:Texpanded}
+T_r(x,y)={}&2\alpha+(F_0-r\alpha)(x+y)+x\log(rx)+y\log(ry)-bRxy\nonumber\\
+&+\gamma R^2\left[2xy\{A(x)+A(y)\}-xA(x)^2-yA(y)^2
+                              -\frac{xy(x^2+y^2)}2\right].
+\end{align}
+Set $x\log(rx)=0$ at $x=0$; the formula then extends continuously to the
+closed nonnegative quadrant. This explicit nonsingular form also specifies
+exactly what the certificate evaluates.
+
+\begin{lemma}[edge certificate]\label{lem:edge}
+For each $3\le r\le 14$, with the anchor and integer $K$ of Table~1, $T_r(1/d,1/c)>0$ for all integers
+$d,c\ge K+1$ with $(d,c)\neq(r,r)$.
+\end{lemma}
+\begin{proof}[Exact finite certificate]
+Put $N=12r$ and $H=1/(N+1)$. By symmetry, all integer reciprocal degree pairs
+are covered by: (i) the points $(1/d,1/c)$ with $K+1\le d\le c\le N$;
+(ii) the boxes $\{1/d\}\times[0,H]$ for $K+1\le d\le N$; and (iii) the box
+$[0,H]^2$. Exclude the known zero $(r,r)$ from (i).
+
+The standard-library program \texttt{verify\_family\_exact.py} evaluates
+\eqref{eq:Texpanded} by integer interval arithmetic with scale $10^{50}$.
+Every logarithm is bounded using a rational odd-power series and an explicit
+tail. Appendix~\ref{app:exact} gives the arithmetic and tail enclosure.
+Every listed point and box has a strictly positive lower endpoint; no box
+requires subdivision. Table~\ref{tab:cert} gives conservative rational
+finite-window bounds. Every mixed or double-tail lower bound exceeds $3/100$.
+The whole infinite degree range is therefore covered, rather than sampled.
+The plane point is zero by exact tangency, not by numerical enclosure.
+\end{proof}
+
+\section{Cofactor peeling}
+\begin{lemma}\label{lem:peel}
+Suppose~\eqref{eq:main} holds for all binary matrices of order $n-1$, and $A$ (order $n$) has a row or column
+of degree $k$ with $\log k+\alpha(r-k)<\ell$. Then~\eqref{eq:main} holds strictly for $A$.
+\end{lemma}
+\begin{proof}
+Transpose if needed. Laplace expansion along the line gives $|\det A|\le\sum_{j}|\det A^{(j)}|$ over its $k$
+nonzero positions; $A^{(j)}$ has order $n-1$ and at most $e-k$ ones. By induction and $\alpha>0$,
+$|\det A|\le k\exp\bigl((n-1)\ell+\alpha(e-k-r(n-1))\bigr)$, which is strictly below the right side
+of~\eqref{eq:main} by the hypothesis.
+\end{proof}
+The certified margins $\ell-\alpha(r-k)-\log k$ are positive for $k=1$ (all $r$) and for $k=2$ when
+$11\le r\le14$; the smallest is $0.0352$ ($r=11$, $k=2$).
+
+\section{Proof of Theorem~\ref{thm:main}}
+Induct on $n$; the empty matrix gives equality and a singular matrix is trivial. A nonsingular matrix has
+every line degree $\ge1$. If some line has degree $k$ with $1\le k\le K$, Lemma~\ref{lem:peel} gives strict
+inequality. Otherwise all degrees are $\ge K+1$, and
+\eqref{eq:deficit} with Lemma~\ref{lem:edge} gives~\eqref{eq:main}.
+
+\section{Equality and actual incidence blocks}
+Suppose equality holds at positive order. The matrix is nonsingular and
+peeling is strict, so every degree exceeds $K$. Every incidence must have
+$T_r=0$; hence all row and column degrees are $r$, and $G=AA^\top$.
+Equality in the Hermite step puts the spectrum of $G$ in $\{t,R\}$.
+Equality in the discarded rectangle term forces $W=0$, since $\gamma>0$ and
+all rectangle weights are positive. Distinct rows therefore meet in at most
+one column.
+
+The symmetric matrix $C=AA^\top-tI$ is binary with diagonal entries one and
+\[
+ C^2=vC,\qquad C\mathbf1=v\mathbf1.
+\]
+The first identity follows from its spectrum $\{0,v\}$, and the second from
+$r$-regularity on both sides. Each row of $C$ has $v$ ones. If $C_{ij}=1$,
+the dot product of rows $i$ and $j$ is $v$, so those binary rows are identical.
+If $C_{ij}=0$, their dot product is zero. Since $C_{ii}=1$, this partitions the
+rows into classes of exactly $v$ elements, with $C$ a direct sum of $J_v$.
+
+Rows from different classes have Gram entry zero; a column cannot meet two
+classes. A class of $v$ rows has $rv$ incidences, while each associated column
+has degree $r$. It therefore has exactly $v$ associated columns. Independent
+row and column permutations put $A$ into square nonsingular blocks $B$ with
+\[
+ BB^\top=tI+J_v,\qquad B\mathbf1=B^\top\mathbf1=r\mathbf1.
+\]
+Since $BJ_v=J_vB=rJ_v$, we also have
+$B^\top B=B^{-1}(tI+J_v)B=tI+J_v$. Thus each block is the incidence matrix
+of a symmetric $2$-$(v,r,1)$ design, equivalently a projective plane of order
+$t$. This derives actual isolated blocks, rather than only their spectral
+parameters.
+
+Conversely such a block has
+$|\det B|^2=R\,t^{v-1}$, so $|\det B|=D_r$, and it has $rv$ ones.
+Determinants multiply and the affine exponent adds under block sums.
+The empty sum gives the order-zero equality. This completes the theorem.
+
+\section{Scope and limitations}
+\begin{remark}
+With these anchors the edge inequality fails at $(3,3)$ for $r=15,16$, while degree-$3$ cofactor peeling is not
+available there; the method as stated stops at $r=14$. For $r\le6$ a simpler separable argument (bounding each
+$q_r(d,u)$ directly) already suffices; it fails for $r\ge7$ near $d\approx2r$.
+\end{remark}
+The certificate package contains a fresh exact-integer scalar replayer and a
+separate replay of the earlier outward-rounded interval certificate.
+Finite-field constructions for $q\in\{2,3,4,5,7,8,9,11,13\}$ verify
+$AA^\top=qI+J$ and the determinant by exact Bareiss elimination. Symbolic
+identities are checked for general $r$. Exhaustive small-matrix numerical
+checks and hill-climbing searches are controls, not proof premises.
+No bounded matrix census establishes an unbounded matrix-order quantifier.
+
+Density $16$ has a separate proof using additional positive spectral terms
+and local resource allocation. A separate technical companion covers the unrestricted inequality, actual-plane
+equality classification, and literal-real-entry endpoints. That separate
+result neither enlarges the density range of Theorem~\ref{thm:main} nor
+establishes the density-$15$ member or an all-density theorem.
+The classical projective-plane examples and the total-sparsity antecedents
+above are not claimed as new.
+
+\paragraph{AI assistance.}
+OpenAI tools assisted mathematical exploration, proof engineering, computational checking, literature research, and manuscript preparation. The author is responsible for the mathematical statements, proofs, source comparisons, and final text.
+
+\appendix
+\section{Exact certificate arithmetic}\label{app:exact}
+The only computational obligation in the proof is the explicit scalar lemma
+and the finitely many peeling margins. The supplied verifier uses only the
+Python standard library; all acceptance decisions compare integers.
+
+For rational $q\in[1,2]$, set $z=(q-1)/(q+1)$. With $M=100$,
+\[
+ 2\sum_{j=0}^{M-1}\frac{z^{2j+1}}{2j+1}
+ \le\log q\le
+ 2\sum_{j=0}^{M-1}\frac{z^{2j+1}}{2j+1}
+ +\frac{2z^{2M+1}}{(2M+1)(1-z^2)}.
+\]
+This is the positive-term $2\operatorname{arctanh}z$ series; bounding all
+tail denominators below by $2M+1$ gives the geometric remainder. Inversion
+and powers of $2$ reduce every positive rational argument to $[1,2]$; the
+same formula encloses $\log2$.
+
+Intervals are stored as integer endpoints divided by $S=10^{50}$.
+Rational lower endpoints are rounded down and upper endpoints up.
+Addition is exact on the grid. For multiplication, take the minimum and
+maximum of the four endpoint products and round outward after division by
+$S$. For division by an interval of one sign, enclose its reciprocal then
+multiply. An interval containing zero is never inverted. Induction on the
+expression therefore proves enclosure for every polynomial operation in
+\eqref{eq:Texpanded}, including the coefficients $\gamma,\alpha,b,F_0$.
+
+At a point $x=1/d$, enclose $x\log(rx)$ directly by the series. For a tail,
+let $\widehat H\ge1/(N+1)$ be the grid-rounded upper endpoint. The verifier
+checks $3r\widehat H<1$ and $\log3>1$ exactly. Thus the derivative
+$\log(rx)+1$ is negative on $(0,\widehat H]$, so
+\[
+ x\log(rx)\in[\widehat H\log(r\widehat H),0]
+       \quad(0\le x\le\widehat H).
+\]
+The lower endpoint is again enclosed by the rational series. The slightly
+enlarged closed interval preserves every reciprocal tail point; neither
+Euler's number nor a transcendental minimizer enters the program.
+
+The program evaluates every unordered finite pair, $N-K$ mixed boxes, and
+the single double-tail box. Every retained lower endpoint must be positive.
+A timeout, an uncertain sign, or an unresolved box cannot count as a pass.
+Three deliberately altered configurations must be rejected: linear anchors
+at $r=10$ and $r=12$, and omitted degree-two peeling at $r=13$. Rejection
+means not certified; it is not in itself a determinant counterexample.
+The exact zero at the plane point remains an algebraic identity.
+
+The complete receipt records scale, series length, source SHA-256, pair
+counts, all lower bounds, and rejected controls. Standard and optimized
+Python runs agree byte for byte. A separate arithmetic review checks interval
+containment against exact fractions and derives \eqref{eq:Texpanded}
+symbolically from the original tangent definition. The README supplies the
+build commands and the frozen artifact manifest.
+
+\section{Formal statement correspondence}
+The companion Lean formalization provides the following statement correspondence.
+In namespace
+\texttt{SparseComponent.TotalFamily}:
+\begin{itemize}
+\item \texttt{determinant\_total\_family} proves the all-count integer bound
+for $3\le r\le14$ with only binary entries as a matrix hypothesis.
+\texttt{determinant\_total\_family\_budget} specializes the budget, and
+\texttt{literal\_total\_family} states the explicit design base.
+\item \texttt{determinant\_total\_family\_equality\_iff} and its budget
+counterpart identify equality through actual row-overlap components and
+their projective-plane incidence property.
+\item \texttt{determinant\_real\_total\_family} is a separately proved
+literal-real-entry interface. Equality is expressed on a canonical integer
+binary representative proved entrywise identical to the real matrix, with
+matching determinant and total count.
+\item \texttt{determinant\_family\_order\_multiple} proves
+$n=(r^2-r+1)\,\#\{\text{actual components}\}$ at equality. Its
+nondivisibility counterpart gives strictness.
+\end{itemize}
+The formal scalar route uses exact rational kernel-reduced gates through
+$3r$ and an analytic reciprocal tail. It is distinct from the $12r$ cover
+in this paper. Concrete endpoints discharge every scalar premise; a generic
+arbitrary-density interface retaining such premises is not an all-density
+result.
+
+The formalization uses only the standard axioms \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. External projective-plane existence and nonexistence results are not formalized. Source versions, dependency pins, and reproducible build instructions are supplied with the companion code.
+
+\medskip
+\begin{thebibliography}{9}
+\bibitem{ABW} I.~Araujo, J.~Balogh, and Y.~Wang,
+Maximum determinant and permanent of sparse $0$--$1$ matrices,
+\emph{Linear Algebra Appl.} \textbf{645} (2022), 194--228.
+\href{https://doi.org/10.1016/j.laa.2022.03.020}{doi:10.1016/j.laa.2022.03.020}.
+\bibitem{BR} H.~Bruhn and D.~Rautenbach,
+Maximal determinants of combinatorial matrices,
+\emph{Linear Algebra Appl.} \textbf{553} (2018), 37--57.
+\href{https://arxiv.org/abs/1711.09935}{arXiv:1711.09935}.
+\bibitem{BruckRyser} R.~H.~Bruck and H.~J.~Ryser,
+The nonexistence of certain finite projective planes,
+\emph{Canad. J. Math.} \textbf{1} (1949), 88--93.
+\href{https://doi.org/10.4153/CJM-1949-009-2}{doi:10.4153/CJM-1949-009-2}.
+\bibitem{HZ} Y.~Hu and Y.~Zuo,
+An upper bound on the number of perfect matchings in $C_4$-free balanced bipartite graphs,
+\emph{Linear Algebra Appl.} \textbf{752} (2027), 171--184; available online 2026.
+\href{https://doi.org/10.1016/j.laa.2026.08.017}{doi:10.1016/j.laa.2026.08.017}.
+\bibitem{LTS} C.~W.~H.~Lam, L.~Thiel, and S.~Swiercz,
+The non-existence of finite projective planes of order 10,
+\emph{Canad. J. Math.} \textbf{41} (1989), 1117--1123.
+\href{https://doi.org/10.4153/CJM-1989-049-4}{doi:10.4153/CJM-1989-049-4}.
+\bibitem{Ry} H.~J.~Ryser,
+Maximal determinants in combinatorial investigations,
+\emph{Canad. J. Math.} \textbf{8} (1956), 245--249.
+\href{https://doi.org/10.4153/CJM-1956-028-4}{doi:10.4153/CJM-1956-028-4}.
+\bibitem{S} D.~Scheinerman,
+Maximal determinants of sparse zero-one matrices,
+\href{https://arxiv.org/abs/1902.09644}{arXiv:1902.09644} (2019).
+\bibitem{Se} J.~Semonsen,
+An asymptotic determinant bound on $0$--$1$ matrices with fixed row sums,
+\href{https://arxiv.org/abs/2002.02482}{\mbox{arXiv:2002.02482}} (2020).
+\bibitem{Sh} Y.~Shitov,
+On the determinant of a sparse $0$--$1$ matrix,
+\emph{Linear Algebra Appl.} \textbf{554} (2018), 49--50.
+\href{https://doi.org/10.1016/j.laa.2018.05.019}{doi:10.1016/j.laa.2018.05.019}.
+\end{thebibliography}
+\end{document}

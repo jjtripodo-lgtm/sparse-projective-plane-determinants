@@ -1,0 +1,13 @@
+{
+  "status": "PASS_SOURCE_INTEGRITY_ONLY",
+  "timestamp_utc": "2026-10-21T17:15:50.738945+00:00",
+  "source_commit": null,
+  "project_modules": 98,
+  "checked_files": 122,
+  "manifest_sha256": "865f59f7158eebc90dca65c8cb2d57a1f569d3d63fae018f86f99bccca7a07bf",
+  "driver_sha256": "a0f4aeaa94e47de41c2ca65836a78021bfac98867ee75fee1c58879d6ca0f635",
+  "proof_escape_flags": [],
+  "errors": [],
+  "fresh_lean_compilation": false,
+  "public_export_note": "Historical pre-sanitization receipt. Private origin commit redacted; manifest hash refers to the original pre-sanitization manifest, not this export. Not a new verification run."
+}

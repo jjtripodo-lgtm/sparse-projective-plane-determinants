@@ -1,0 +1,7 @@
+{
+  "status": "PASS_LATEX_BUILD",
+  "paper_tex_sha256": "3983c2ef78e942fe606a4051ff1cf1419db213833bd0a0a55a244ede691c7d6d",
+  "pdf_sha256": "90088f96c8d64ad85b02231490787d2e1551a38755d41d0b03ef1393543af47c",
+  "pdflatex_version": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+  "warnings": []
+}

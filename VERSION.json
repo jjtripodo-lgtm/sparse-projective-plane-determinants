@@ -1,0 +1,20 @@
+{
+  "paper_id": "sparse",
+  "version": "1.0.0",
+  "status": "PUBLISHED_ZENODO",
+  "original_tex_sha256": "6939b573f037decad45669141e038010a86a1ab1e163af2e2d4e003e4152385a",
+  "original_pdf_sha256": "fd1ccc7d20492692c33e8c339b6191152f1773f47d3cbd2c4de99c788d36bb92",
+  "paper_tex_sha256": "3983c2ef78e942fe606a4051ff1cf1419db213833bd0a0a55a244ede691c7d6d",
+  "paper_pdf_sha256": "90088f96c8d64ad85b02231490787d2e1551a38755d41d0b03ef1393543af47c",
+  "paper_doi": "10.5281/zenodo.23550379",
+  "software_doi": null,
+  "hexagon_id": "2610.00457v1",
+  "palomar_id": null,
+  "public_repository": "https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants",
+  "proposed_repository": "jjtripodo-lgtm/sparse-projective-plane-determinants",
+  "manuscript_license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "fresh_lean_replay": false,
+  "hexagon_status": "MODERATION_PENDING_NOT_PUBLIC",
+  "repository_status": "PUBLIC_REPOSITORY_CREATED"
+}
