@@ -18,16 +18,16 @@
       "sha256": "ba311cd65c93a6401889ad9ee21b143f61e626288be286976ab339941bf91b25"
     },
     "CITATION.cff": {
-      "bytes": 1413,
-      "sha256": "53e7a13fda24bfbe8af4361a8c515419ebd8a1b9bc2f30d0ed3a31f53245e068"
+      "bytes": 1670,
+      "sha256": "4618da04fb25994058d9a74486e95258af5ff1b143b8a97d02ee5754e79fe688"
     },
     "DEPENDENCIES.json": {
       "bytes": 2179,
       "sha256": "f0b7ab13090bc9fcc81738e8f3fd7bc38300108df49c25587620c93208955c24"
     },
     "DEPOSIT_METADATA.json": {
-      "bytes": 1338,
-      "sha256": "58bd99bb6ce76df504cbc1bc4145d78fb7167a0ad35d5b84cd90cbd90501fa72"
+      "bytes": 1887,
+      "sha256": "5b18c21fa568f10503c9cd84542ae6296502a3c9737b1f5b3fe41013e0218d91"
     },
     "FORMAL_SCOPE.md": {
       "bytes": 729,
@@ -42,12 +42,12 @@
       "sha256": "4a3e45101a63481e5f0e15141ba32c2b6c15e72be6deb071c7380a48c08bdfd7"
     },
     "README.md": {
-      "bytes": 1816,
-      "sha256": "cf7d7f154596651e3fa9c78f9e5e76076226908bfd04d4ffe75b6527752e7d3e"
+      "bytes": 2225,
+      "sha256": "ffab395eab35a8eaaca7a06c6eb316aa3cd70dd0fb53125bce9ff3ba6bf49c37"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 899,
-      "sha256": "810dd6b89feb062305a79da4304698fb0822d73bcade9f5464222e8ed7e77307"
+      "bytes": 1275,
+      "sha256": "0447d57b1c66b45b65defc0ad6eb648354e29db9b2cdbef73cf87bf9d0b5417e"
     },
     "REPRODUCE.md": {
       "bytes": 2018,
@@ -58,16 +58,16 @@
       "sha256": "a8f7a61c061655b77cd6063b6eda5fa105f81e7d5c28d437c501f843f1680251"
     },
     "VERSION.json": {
-      "bytes": 941,
-      "sha256": "d70baedbfdb0e04dc3b710c6e2b6264baf994fbeb93850f377ace50c63123158"
+      "bytes": 1426,
+      "sha256": "a3ac36c8532537bed24ad011a57cbbf18ff016d502e4114bcb9d078d424ac736"
     },
     "build_paper.py": {
       "bytes": 2271,
       "sha256": "9fac498dff0dea993cd003d80694b3edb0d6f31a3f3eff7009573c0d2b23ebf6"
     },
     "citation.bib": {
-      "bytes": 282,
-      "sha256": "fb878c3c16b3d2b9247dd009faa821c189beea1f344c673c1a56b399ee360ccc"
+      "bytes": 478,
+      "sha256": "15f59e053209d9afeeb0d8a85c02027f73d2aa491fd13b9eef4a33461cec0f9f"
     },
     "companion/MAIN_RELEASE_SOURCE_MANIFEST.json": {
       "bytes": 19158,
@@ -708,6 +708,10 @@
     "provenance/SOURCE.json": {
       "bytes": 418,
       "sha256": "91bf682499f2e362d87bf87800d3d6d0a7373935b15da2a57fdfbed3acee2d5d"
+    },
+    "publication_history/README.md": {
+      "bytes": 940,
+      "sha256": "09eae66cc2d021dddec676436252a2d3c8f25f15b4e53f37d48cd7b00fd1d3db"
     },
     "requirements-optional.txt": {
       "bytes": 28,

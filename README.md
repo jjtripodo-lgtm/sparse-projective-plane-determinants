@@ -10,11 +10,11 @@ The selected paper covers densities 3 through 14. Density 16 is a separate resul
 
 ## Publication and repository
 
-The paper is published on [Zenodo](https://zenodo.org/records/23550379), DOI [10.5281/zenodo.23550379](https://doi.org/10.5281/zenodo.23550379).
+The paper remains available as [manuscript version 1.0.0](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf). Following review of repository eligibility, the author voluntarily withdrew the Zenodo deposit on 22 October 2026. Former DOI [10.5281/zenodo.23550379](https://doi.org/10.5281/zenodo.23550379) is retained as historical provenance; it is no longer the active reading or citation destination. See [publication history](publication_history/README.md).
 
 The dedicated public repository is [jjtripodo-lgtm/sparse-projective-plane-determinants](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants). Consult VERSION.json for publication status.
 
-Hexagon submission `2610.00457v1` is awaiting moderation and is not yet public. The Zenodo DOI above is the published citation.
+Hexagon submission `2610.00457v1` was last recorded as awaiting moderation, not public. Use the pinned GitHub manuscript link above for citation.
 
 The manuscript is licensed under CC BY 4.0 and original code under MIT. Read LICENSE for scope and THIRD_PARTY_NOTICES.md for retained third-party rights.
 

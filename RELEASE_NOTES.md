@@ -12,6 +12,6 @@ Internal written review and the scoped computational replays found no blocking
 defect. No external human peer review or fresh Lean compilation is claimed.
 The manuscript's mathematical content is unchanged by the final licensing pass.
 
-Published paper DOI: https://doi.org/10.5281/zenodo.23550379.
-Hexagon submission 2610.00457v1 awaits moderation and is not yet public.
+Hosting update, 22 October 2026: the author voluntarily withdrew the Zenodo deposit following review of repository eligibility, formerly DOI https://doi.org/10.5281/zenodo.23550379. The unchanged manuscript remains available at https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf. See publication_history/README.md for preserved deposition metadata.
+Hexagon submission 2610.00457v1 was last recorded as awaiting moderation, not public.
 VERSION.json records repository and publication status.

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the paper using its version-specific Zenodo DOI."
+message: "Please cite the manuscript version using the pinned GitHub PDF URL below. The former Zenodo DOI is historical."
 type: software
 license: MIT
 title: "Projective-plane determinant bounds for sparse binary matrices"
@@ -24,6 +24,5 @@ preferred-citation:
   year: 2026
   version: "1.0.0"
   status: preprint
-  doi: 10.5281/zenodo.23550379
-  url: https://zenodo.org/records/23550379
-  notes: "Manuscript CC BY 4.0, version 1.0.0. Hexagon submission is awaiting moderation and is not yet public."
+  url: https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf
+  notes: "Manuscript CC BY 4.0, version 1.0.0. Hexagon submission was last recorded as awaiting moderation, not public. Former DOI 10.5281/zenodo.23550379 identifies the Zenodo deposit withdrawn on 22 October 2026; the manuscript remains available on GitHub."
