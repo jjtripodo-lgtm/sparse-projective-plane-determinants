@@ -14,7 +14,7 @@ The paper remains available as [manuscript version 1.0.0](https://github.com/jjt
 
 The dedicated public repository is [jjtripodo-lgtm/sparse-projective-plane-determinants](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants). Consult VERSION.json for publication status.
 
-Hexagon submission `2610.00457v1` was last recorded as awaiting moderation, not public. Use the pinned GitHub manuscript link above for citation.
+**Hexagon publication confirmed 22 October 2026:** [hexagon:2610.00457v1](https://hexagonmath.org/2610.00457?version=1). The Hexagon identifier is a stable preprint record, not a DOI or peer-review certificate. Keep the pinned GitHub manuscript above for byte-exact version-specific citation.
 
 The manuscript is licensed under CC BY 4.0 and original code under MIT. Read LICENSE for scope and THIRD_PARTY_NOTICES.md for retained third-party rights.
 
