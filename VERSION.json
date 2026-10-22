@@ -15,7 +15,10 @@
   "manuscript_license": "CC-BY-4.0",
   "code_license": "MIT",
   "fresh_lean_replay": false,
-  "hexagon_status": "MODERATION_PENDING_NOT_PUBLIC",
+  "hexagon_status": "PUBLISHED_EMAIL_CONFIRMED",
+  "hexagon_url": "https://hexagonmath.org/2610.00457?version=1",
+  "hexagon_published_on": "2026-10-22",
+  "hexagon_source": "Hexagon publication confirmation email; public page/PDF byte identity not independently rechecked",
   "repository_status": "PUBLIC_REPOSITORY_CREATED",
   "paper_url": "https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf",
   "historical_zenodo_deposit": {
