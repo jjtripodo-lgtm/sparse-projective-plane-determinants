@@ -10,15 +10,15 @@
 
 ## Main mathematical claim
 
-For each integer density (3\le r\le14), define
+For each integer density `3 <= r <= 14`, define
 
 `v = r^2 - r + 1`, `D_r = r (r-1)^((v-1)/2)`.
 
-For an (n\times n) zero-one matrix (A) with **at most** (rn) entries equal to one, the manuscript establishes
+For an `n x n` zero-one matrix `A` with **at most** `r*n` entries equal to one, the manuscript establishes
 
 `|det A| <= D_r^(n/v)`.
 
-Individual row and column degrees need **not** be bounded by r. The proof gives a stronger all-count inequality and characterizes equality using direct sums of incidence matrices of projective planes of order (r-1), when such planes exist. Claims in this manuscript are restricted to densities **3 through 14**. Density 16 belongs to a separate project; density 15 and a universal all-density result are not established here.
+Individual row and column degrees need **not** be bounded by r. The proof gives a stronger all-count inequality and characterizes equality using direct sums of incidence matrices of projective planes of order `r-1`, when such planes exist. Claims in this manuscript are restricted to densities **3 through 14**. Density 16 belongs to a separate project; density 15 and a universal all-density result are not established here.
 
 ## What the evidence does, and does not, establish
 
