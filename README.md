@@ -2,6 +2,10 @@
 
 John Tripodo | [ORCID](https://orcid.org/0009-0006-9180-4953) | manuscript version 1.0.0
 
+**Start here:** [Hexagon preprint hexagon:2610.00457v1](https://hexagonmath.org/2610.00457v1) · [Immutable version 1.0.0 PDF](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf) · [Reader guide and scoped review questions](READER_GUIDE.md). Hexagon is moderated preprint hosting, not independent peer review; no active DOI is assigned. The withdrawn Zenodo identifier below is historical provenance only.
+
+**Other public papers:** [Separated distances](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension) · [Double Hall](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree).
+
 For each integer 3 <= r <= 14, set v=r^2-r+1 and D_r=r(r-1)^((v-1)/2). If an n by n zero-one matrix has e <= r n ones, then |det A| <= D_r^(n/v). The manuscript proves a stronger all-count inequality and characterizes equality by actual projective-plane blocks.
 
 Read [paper.pdf](paper.pdf), [TeX source](paper.tex), and [REPRODUCE.md](REPRODUCE.md).
