@@ -2,7 +2,7 @@
 
 John Tripodo | [ORCID](https://orcid.org/0009-0006-9180-4953) | manuscript version 1.0.0
 
-**Start here:** [Hexagon preprint hexagon:2610.00457v1](https://hexagonmath.org/2610.00457v1) · [Immutable version 1.0.0 PDF](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf) · [Reader guide and scoped review questions](READER_GUIDE.md). Hexagon is moderated preprint hosting, not independent peer review; no active DOI is assigned. The withdrawn Zenodo identifier below is historical provenance only.
+**Start here:** [Hexagon preprint hexagon:2610.00457v1](https://hexagonmath.org/2610.00457v1) · [Immutable version 1.0.0 PDF](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf) · [Reader guide and scoped review questions](READER_GUIDE.md). 
 
 **Other public papers:** [Separated distances](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension) · [Double Hall](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree).
 
