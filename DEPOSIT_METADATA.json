@@ -20,11 +20,11 @@
     "combinatorial matrix theory"
   ],
   "license": "CC-BY-4.0",
-  "publication_date": null,
+  "publication_date": "2026-10-22",
   "doi": null,
   "related_identifiers": [],
   "status": "AVAILABLE_ON_GITHUB",
-  "note": "The Zenodo deposit was withdrawn on 22 October 2026. The unchanged manuscript remains available on GitHub. Hexagon submission 2610.00457v1 was last recorded as awaiting moderation, not public.",
+  "note": "Hexagon preprint hexagon:2610.00457v1 was published on 22 October 2026. Hexagon is a moderated preprint repository, not independent peer review, and has assigned no DOI. The separate Zenodo deposit was voluntarily withdrawn on 22 October 2026; its DOI is historical provenance only. The unchanged manuscript remains available on GitHub.",
   "original_code_license": "MIT",
   "url": "https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants/blob/3e247aa28d47cb40f252f22df3db143d0bc8ceac/paper.pdf",
   "historical_zenodo_deposit": {
