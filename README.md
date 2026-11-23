@@ -10,6 +10,8 @@ For each integer 3 <= r <= 14, set v=r^2-r+1 and D_r=r(r-1)^((v-1)/2). If an n b
 
 Read [paper.pdf](paper.pdf), [TeX source](paper.tex), and [REPRODUCE.md](REPRODUCE.md).
 
+**Independent verification campaign:** [Palomar readiness dossier](PALOMAR_READINESS.md) · [read-only structural preflight](palomar_preflight.py) · [local fixture tests](tests/test_palomar_preflight.py). The existing companion is **not Palomar-ready**: its frozen Lean 4.31 toolchain precedes the current Comparator requirement, and it lacks the Challenge/Solution submission interface. No new Lean build, registry application, expert review or scientific theorem is claimed.
+
 The selected paper covers densities 3 through 14. Density 16 is a separate result. Density 15 and a universal all-density theorem are not proved here. Plane existence/nonexistence inputs in the corollary are external cited results.
 
 ## Publication and repository

@@ -610,8 +610,8 @@
       "sha256": "f0b7ab13090bc9fcc81738e8f3fd7bc38300108df49c25587620c93208955c24"
     },
     "DEPOSIT_METADATA.json": {
-      "bytes": 1887,
-      "sha256": "5b18c21fa568f10503c9cd84542ae6296502a3c9737b1f5b3fe41013e0218d91"
+      "bytes": 2039,
+      "sha256": "f6685ac4eb2ba9f26bb7fef0dc56d54847f4940c5be6d8aadce98e9956afae95"
     },
     "FORMAL_SCOPE.md": {
       "bytes": 729,
@@ -669,6 +669,14 @@
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
+    "palomar_preflight.py": {
+      "bytes": 8819,
+      "sha256": "5a65c53386523297f92e243c0d190e214de32b221e13b5f999a4bed8e1d27212"
+    },
+    "PALOMAR_READINESS.md": {
+      "bytes": 6625,
+      "sha256": "ebe6d99eee5f194e361c4761afa9f64a2d360f709138d441d8e8a7de166feff0"
+    },
     "paper.pdf": {
       "bytes": 385794,
       "sha256": "90088f96c8d64ad85b02231490787d2e1551a38755d41d0b03ef1393543af47c"
@@ -698,8 +706,8 @@
       "sha256": "26a75487ef8be520745e149b4c47f9e2220e77dbe1cadd0769d9c528e4f855d5"
     },
     "README.md": {
-      "bytes": 3045,
-      "sha256": "d385d2a0b122078a41ca89a1762434b6b377c8e6f64f7674917e71dc179b2df0"
+      "bytes": 2987,
+      "sha256": "241977ae04d2e3602bea80ffcd17438428026b75b1ed99a56786de56e7054826"
     },
     "RELEASE_NOTES.md": {
       "bytes": 1275,
@@ -712,6 +720,10 @@
     "requirements-optional.txt": {
       "bytes": 28,
       "sha256": "47fd19021144e071cc43b6e265aafada0056abe89724ad95bd6e3a8e37995b94"
+    },
+    "tests/test_palomar_preflight.py": {
+      "bytes": 3381,
+      "sha256": "fd1e92390f3dc22c30e2a33ea91488f1a61f64419694910bb3260a35a88b3d9c"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 615,
